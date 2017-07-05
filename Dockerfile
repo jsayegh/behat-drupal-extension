@@ -9,5 +9,6 @@ RUN cd /opt
 RUN mkdir drupalextension
 RUN cd drupalextension/
 ADD composer.json /opt/drupalextension
-RUN sudo composer install
+RUN ls
+RUN composer install
 RUN ln -s /opt/drupalextension/bin/behat /usr/local/bin/behat
