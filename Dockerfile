@@ -3,6 +3,7 @@ MAINTAINER Jad Sayegh <j.sayegh@eweev.com>
 
 RUN apt-get update
 RUN apt-get install curl -y
+RUN apt-get install php5 php5-cli php-pear
 RUN curl -sS https://getcomposer.org/installer | php 
 RUN mv composer.phar /usr/local/bin/composer
 RUN cd /opt
