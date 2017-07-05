@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM ubuntu:16.04
 MAINTAINER Jad Sayegh <j.sayegh@eweev.com>
 
 RUN apt-get update
