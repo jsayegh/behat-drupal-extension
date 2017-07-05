@@ -2,11 +2,11 @@ FROM ubuntu:16.04
 MAINTAINER Jad Sayegh <j.sayegh@eweev.com>
 
 RUN apt-get update
-RUN sudo apt-get install curl php-cli php-mbstring git unzip
+RUN apt-get install curl php-cli php-mbstring git unzip
 RUN curl -sS https://getcomposer.org/installer | php 
 RUN mv composer.phar /usr/local/bin/composer
 RUN cd /opt
-RUN sudo mkdir drupalextension
+RUN mkdir drupalextension
 RUN cd drupalextension/
 ADD composer.json /opt/drupalextension
 RUN sudo composer install
