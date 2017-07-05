@@ -2,8 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Jad Sayegh <j.sayegh@eweev.com>
 
 RUN apt-get update
-RUN apt-get install curl -y
-RUN apt-get install php5 libapache2-mod-php5
+RUN sudo apt-get install curl php-cli php-mbstring git unzip
 RUN curl -sS https://getcomposer.org/installer | php 
 RUN mv composer.phar /usr/local/bin/composer
 RUN cd /opt
