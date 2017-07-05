@@ -6,9 +6,13 @@ RUN apt-get install curl php-cli php-mbstring git unzip -y
 RUN curl -sS https://getcomposer.org/installer | php 
 RUN mv composer.phar /usr/local/bin/composer
 RUN cd /opt
+RUN pwd
 RUN mkdir drupalextension
 RUN cd drupalextension/
+RUN pwd
 ADD composer.json /opt/drupalextension
+RUN pwd
+RUN cd /opt/drupalextension
 RUN ls
 RUN composer install
 RUN ln -s /opt/drupalextension/bin/behat /usr/local/bin/behat
