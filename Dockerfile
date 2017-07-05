@@ -1,6 +1,8 @@
 FROM alpine:3.4
 MAINTAINER Jad Sayegh <j.sayegh@eweev.com>
 
+RUN apt-get update
+RUN apt-get install curl -y
 RUN curl -sS https://getcomposer.org/installer | php 
 RUN mv composer.phar /usr/local/bin/composer
 RUN cd /opt
