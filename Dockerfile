@@ -1,4 +1,4 @@
-FROM phase2/devtools-build
+FROM phase2/devtools-build:php56
 MAINTAINER Jad Sayegh <j.sayegh@eweev.com>
 
 RUN mkdir -p /opt/drupalextenstion
